@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#07142A"/>
+  <!-- Blueprint grid -->
+  <defs>
+    <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#162642" stroke-width="0.7"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#grid2)" />
+  
+  <!-- Room enclosure -->
+  <rect x="100" y="90" width="600" height="420" fill="#0B1B33" stroke="#E58A1F" stroke-width="2"/>
+  <line x1="100" y1="420" x2="700" y2="420" stroke="#C6A15B" stroke-width="2"/>
+  
+  <!-- Architectural cabinetry / modular kitchen lines -->
+  <rect x="150" y="150" width="180" height="210" fill="#1B3158" stroke="#E58A1F" stroke-width="1.5"/>
+  <line x1="240" y1="150" x2="240" y2="360" stroke="#C6A15B" stroke-width="1.2"/>
+  <line x1="150" y1="250" x2="330" y2="250" stroke="#C6A15B" stroke-width="1.2"/>
+  
+  <!-- Island / Countertop -->
+  <rect x="380" y="320" width="260" height="100" fill="#1B3158" stroke="#C6A15B" stroke-width="2"/>
+  <line x1="380" y1="360" x2="640" y2="360" stroke="#E58A1F" stroke-width="1.5" stroke-dasharray="4 2"/>
+  
+  <!-- Pendant lighting feature -->
+  <line x1="450" y1="90" x2="450" y2="210" stroke="#C6A15B" stroke-width="1.5"/>
+  <circle cx="450" cy="225" r="16" fill="none" stroke="#E58A1F" stroke-width="2"/>
+  <line x1="570" y1="90" x2="570" y2="210" stroke="#C6A15B" stroke-width="1.5"/>
+  <circle cx="570" cy="225" r="16" fill="none" stroke="#E58A1F" stroke-width="2"/>
+  
+  <!-- Annotation -->
+  <text x="400" y="550" fill="#C6A15B" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle" letter-spacing="2">KITCHEN &amp; INTERIOR ARCHITECTURE</text>
+  <text x="510" y="295" fill="#FFFFFF" font-family="Fraunces, serif" font-size="20" font-weight="600" text-anchor="middle">Kitchen &amp; Interior Remodeling</text>
+</svg>
+

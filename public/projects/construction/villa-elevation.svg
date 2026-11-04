@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#0B1B33"/>
+  <!-- Grid lines -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1B3158" stroke-width="0.7"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#grid)" />
+  
+  <!-- Ground line -->
+  <line x1="60" y1="480" x2="740" y2="480" stroke="#E58A1F" stroke-width="3"/>
+  
+  <!-- Main building mass -->
+  <rect x="180" y="240" width="440" height="240" fill="#07142A" stroke="#E58A1F" stroke-width="2"/>
+  <rect x="250" y="140" width="300" height="100" fill="#0B1B33" stroke="#E58A1F" stroke-width="2"/>
+  <polygon points="150,240 400,90 650,240" fill="none" stroke="#C6A15B" stroke-width="2.5"/>
+  
+  <!-- Windows & Balcony -->
+  <rect x="220" y="270" width="90" height="80" fill="#1B3158" stroke="#C6A15B" stroke-width="1.5"/>
+  <rect x="490" y="270" width="90" height="80" fill="#1B3158" stroke="#C6A15B" stroke-width="1.5"/>
+  <rect x="360" y="360" width="80" height="120" fill="#1B3158" stroke="#E58A1F" stroke-width="2"/>
+  <circle cx="425" cy="425" r="4" fill="#C6A15B"/>
+  
+  <!-- Dimension lines -->
+  <line x1="180" y1="520" x2="620" y2="520" stroke="#55607A" stroke-dasharray="6 4" stroke-width="1.5"/>
+  <line x1="180" y1="510" x2="180" y2="530" stroke="#55607A" stroke-width="1.5"/>
+  <line x1="620" y1="510" x2="620" y2="530" stroke="#55607A" stroke-width="1.5"/>
+  <text x="400" y="545" fill="#C6A15B" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle" letter-spacing="2">FRONT ELEVATION // 500 SQ YDS</text>
+  
+  <text x="400" y="200" fill="#FFFFFF" font-family="Fraunces, serif" font-size="22" font-weight="600" text-anchor="middle">Custom Home Construction</text>
+  <text x="400" y="440" fill="#FBE9D0" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">GROUND-UP BUILD · KARACHI</text>
+</svg>
+
