@@ -9,6 +9,7 @@ const accentColors = {
   construction: '#E58A1F',
   software: '#2E6BFF',
   education: '#139C8A',
+  rose: '#B23A5A',
 };
 
 const navLinks = [
@@ -20,6 +21,7 @@ const navLinks = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
+  const activeDivision = divisions.find((d) => pathname.startsWith(`/${d.slug}`));
 
   const isActive = (to) => {
     if (to === '/') return pathname === '/';
@@ -28,7 +30,10 @@ export default function Header() {
 
   return (
     <>
-      <header className="site-header">
+      <header
+        className="site-header"
+        data-division={activeDivision?.accentKey || undefined}
+      >
         <div className="container header-inner">
           <Wordmark size="1.2rem" />
 
@@ -78,7 +83,12 @@ export default function Header() {
 
       {/* Full-screen mobile menu */}
       {menuOpen && (
-        <div className="mobile-menu-overlay" role="dialog" aria-modal="true">
+        <div
+          className="mobile-menu-overlay"
+          role="dialog"
+          aria-modal="true"
+          data-division={activeDivision?.accentKey || undefined}
+        >
           <div
             style={{
               display: 'flex',

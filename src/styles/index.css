@@ -66,6 +66,11 @@
   --accent-100: #DDF3EF;
   --accent-700: #0B6B5E;
 }
+[data-division="rose"] {
+  --accent:     #B23A5A;
+  --accent-100: #F7E3E7;
+  --accent-700: #7A1F37;
+}
 
 /* ---------- Reset ---------- */
 *, *::before, *::after {
@@ -191,11 +196,11 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
 .header-nav {
   display: none;
   align-items: center;
-  gap: calc(var(--grid) * 4);
+  gap: calc(var(--grid) * 3);
   list-style: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .header-nav { display: flex; }
 }
 
@@ -206,6 +211,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   padding: 4px 0;
   border-bottom: 2px solid transparent;
   transition: color 0.2s, border-color 0.2s;
+  white-space: nowrap;
 }
 
 .header-nav a:hover,
@@ -265,7 +271,7 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
   color: var(--navy-950);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
   .mobile-menu-btn { display: none; }
 }
 
@@ -317,7 +323,13 @@ button, input, select, textarea { font-family: inherit; font-size: inherit; }
 
 @media (min-width: 768px) {
   .footer-grid {
-    grid-template-columns: 1.5fr repeat(3, 1fr) 1.2fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1.4fr repeat(4, 1fr) 1.2fr;
   }
 }
 

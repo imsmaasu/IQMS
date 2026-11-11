@@ -1,0 +1,54 @@
+[PERSONAL DETAIL INFORMATION]
+R2 | Candidate's First Name {req} | Candidate's Middle Name | Candidate's Last Name {req}
+R3 | Father's First Name | Father's Middle Name | Father's Last Name
+R4 | Mother's First Name | Mother's Middle Name | Mother's Last Name
+R5 | Guardian's First Name | Guardian's Middle Name | Guardian's Last Name
+R6 | Birth's Date {date18} {req} | Birth's Country | Birth's City
+R7 | Birth Time {time} | Birth Place / Hospital | Zodiac Sign / Star
+R8 | Religion {req} | Sect / Denomination | Sub Caste / Clan / Tribe
+R9 | Mother Tongue | Spoken Language | Religious Practice Level {sel: Very practicing / Practicing / Moderate / Not practicing}
+R10 | Education {req} | Field | Percentage {num 0-100}
+R11 | Highest Degree | Board / University | School / Institute
+R12 | Division | Grade | CGPA {num, 2 decimals}
+R13 | Additional Certifications | Education Sector (Govt/Private) {sel: Govt / Private} | Studied Abroad (Yes/No) {yn}
+R14 | Gender {sel: Male / Female} {req} | Caste | Belongs
+R15 | Marital Status {sel: Never Married / Divorced / Widowed / Separated} {req} | Height | Weight
+R16 | Have Children (Yes/No) {yn} | Number of Children {num} | Children Living Status
+R17 | Boys {num} | Girls {num} | Children Not Alive {num}
+R18 | Complexion | Body Type | Blood Group {sel: A+ / A- / B+ / B- / AB+ / AB- / O+ / O-}
+R19 | Physical Disability {yn} | Disability Details | Special Needs / Health Conditions {long}
+R20 | Hobbies & Interests | Fitness / Sports | Dietary Preferences
+R21 | Smoking Habits | Drinking Habits | Pet Friendly {yn}
+R22 | Profession {req} | Experience | Profession's Area
+R23 | Income {num} | Income Period (Monthly/Annual) {sel: Monthly / Annual} | Currency {sel: PKR / USD / GBP / AED / SAR / Other}
+R24 | Business Name | Business's Type | Business's Designation
+R25 | Job Name | Job's Type | Job's Designation
+R26 | Company / Organization Name | Work Location | Employment Sector (Govt/Pvt) {sel: Govt / Pvt}
+R27 | Remote Work Status | Career Goals / Future Plans {long} | Own House / Property Status
+R28 | Family Type | Family Status / Class | Parental Status
+R29 | Father's Occupation | Father's Income Status | Father's Income {num}
+R30 | Mother's Occupation | Mother's Income Status | Mother's Income {num}
+R31 | Family Values (Liberal/Moderate) {sel: Liberal / Moderate} | Ancestral Origin / Hometown | Family House Type
+R32 | Brothers {num} | Elders Brothers {num} | Youngers Brothers {num}
+R33 | Married Brothers {num} | Unmarried Brothers {num} | Brother's Occupations
+R34 | Sisters {num} | Elders Sisters {num} | Youngers Sisters {num}
+R35 | Married Sisters {num} | Unmarried Sisters {num} | Sister's Occupations
+R36 | Residencey Status | Permanent Address {long} {req} | Current Zip / Postal Code
+R37 | Citizenship / Nationality | Passport Number {secret} | Passport Held (Yes/No) {yn}
+R38 | Dual Citizenship {yn} | Visa Type / Status | Willingness to Relocate {yn}
+R39 | Relocation Countries Preference | Contact Number {tel} {req} | Email Address {email}
+R40 | Guardian Contact Number {tel} | Primary Contact Person | Preferred Contact Time
+R41 | About Self / Bio {long} | Profile Photo Upload / Privacy {file image} | Photo Privacy Preference {sel: Visible to all / Visible after both families agree / Share on request only}
+R42 | ID Verification Type (CNIC) {secret} | ID Verification Status {sel: Pending / Verified / Not verified} | Social Media Handles (Optional)
+
+[REQUIREMENTS]
+R46 | Age Range {range num} {req} | Height Range {range} | Weight Range {range}
+R47 | Marital Status {sel: Never Married / Divorced / Widowed / Separated / Any} {req} | Caste | Belongs
+R48 | Preferred Religion / Sect | Preferred Mother Tongue | Preferred Sub Caste / Tribe
+R49 | Education | Profession | Income
+R50 | Area | Preferred Country / Residency | Preferred Residency Status
+R51 | Dietary Preferences | Smoking / Drinking Preferences | Preferred Citizenship
+R52 | Complexion Preference | Body Type Preference | Religious Value Preference
+R53 | Accept Children from Previous Marriage {yn} | Accept Disability / Special Needs {yn} | Family Type Preference
+R54 | About Ideal Partner {long} | Mandatory Requirements / Dealbreakers {long} | Preferred Willingness to Relocate {yn}
+

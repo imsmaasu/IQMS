@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -13,11 +13,24 @@ import NotFound from './pages/NotFound';
 import DivisionPage from './pages/DivisionPage';
 import divisions from './data/divisions';
 
+const MarriageBureau = lazy(() => import('./pages/MarriageBureau'));
+
 // Map of custom override components for existing divisions
 const customDivisionPages = {
   construction: <Construction />,
   software: <Software />,
   education: <Education />,
+  marriage: (
+    <Suspense
+      fallback={
+        <div className="container section-spacing" style={{ textAlign: 'center' }}>
+          Loading Marriage Bureau…
+        </div>
+      }
+    >
+      <MarriageBureau />
+    </Suspense>
+  ),
 };
 
 export default function App() {

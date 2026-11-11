@@ -190,6 +190,39 @@ const divisions = [
         'Find qualified tutors for Matric, FSc, O and A Levels, ECAT, MDCAT, and University subjects. Online or on site. IQMS STEM SEED PARKS.',
     },
   },
+
+  {
+    id: 'marriage',
+    slug: 'marriage-bureau',
+    number: '04',
+    name: 'Marriage Bureau',
+    tagline: 'Private family registrations, reviewed with care.',
+    summary:
+      'A marriage bureau service in Karachi. Candidates or families complete a structured registration form, and our team reviews it privately and follows up on WhatsApp.',
+    accentKey: 'rose',
+    accent: 'rose',
+    customPage: true,
+    services: [
+      'Candidate biodata registration',
+      'Partner requirement intake',
+      'Private record review in Karachi',
+      'Direct family follow-up on WhatsApp',
+    ],
+    heroCopy: {
+      eyebrow: 'MARRIAGE BUREAU · KARACHI',
+      headline: 'Finding the right rishta, with care.',
+      description:
+        'Register once for yourself or a family member. Our bureau team reads your details privately and follows up directly on WhatsApp.',
+    },
+    formConfig: {
+      title: 'Registration Form',
+    },
+    seo: {
+      title: 'Marriage Bureau | SerajUlMaymar',
+      description:
+        'Marriage Bureau in Karachi, Pakistan. Register candidate details and partner requirements privately. SerajUlMaymar Marriage Bureau.',
+    },
+  },
 ];
 
 export default divisions;

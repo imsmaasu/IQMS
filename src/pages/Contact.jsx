@@ -10,12 +10,14 @@ const accentColors = {
   construction: '#E58A1F',
   software: '#2E6BFF',
   education: '#139C8A',
+  rose: '#B23A5A',
 };
 
 const formRoutes = {
   construction: '/construction',
   software: '/software',
   education: '/education/enroll',
+  marriage: '/marriage-bureau#register',
 };
 
 export default function Contact() {

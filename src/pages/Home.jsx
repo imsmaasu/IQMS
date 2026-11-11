@@ -10,6 +10,7 @@ const accentColors = {
   construction: { accent: '#E58A1F', accent100: '#FBE9D0', accent700: '#9A5608' },
   software:     { accent: '#2E6BFF', accent100: '#E3ECFF', accent700: '#1B45B8' },
   education:    { accent: '#139C8A', accent100: '#DDF3EF', accent700: '#0B6B5E' },
+  rose:         { accent: '#B23A5A', accent100: '#F7E3E7', accent700: '#7A1F37' },
 };
 
 const divisionImages = {
@@ -27,6 +28,12 @@ const divisionImages = {
     src: '/divisions/education-hero.webp',
     alt: 'STEM education and academic mentoring',
     badge: 'TUTOR MARKETPLACE'
+  },
+  marriage: {
+    src: '/images/marriage-bureau/hero-main.webp',
+    alt: 'Bridal hands decorated with traditional mehndi henna and gold wedding bands',
+    badge: 'MARRIAGE BUREAU · KARACHI',
+    arch: true
   }
 };
 
@@ -35,7 +42,7 @@ export default function Home() {
     <>
       <SEO
         title={`${siteConfig.brandName} | ${siteConfig.tagline}`}
-        description={`${siteConfig.brandName}: construction, software development, and education. ${siteConfig.stats[0]?.label}. ${siteConfig.city}, ${siteConfig.country}.`}
+        description={`${siteConfig.brandName}: ${divisions.map((d) => d.name.toLowerCase()).join(', ')}. ${siteConfig.stats[0]?.label}. ${siteConfig.city}, ${siteConfig.country}.`}
       />
 
       {/* ── Hero ── */}
@@ -71,8 +78,8 @@ export default function Home() {
             <FadeIn>
               <p style={{ fontSize: '1.0625rem', maxWidth: 520, marginBottom: 32 }}>
                 {siteConfig.brandName} is a Karachi based group with 25+ years in
-                construction and education, now expanded into software development.
-                Three divisions, one standard of care.
+                construction and education, alongside software development and our
+                marriage bureau. {divisions.length} divisions, one standard of care.
               </p>
             </FadeIn>
 
@@ -209,45 +216,87 @@ export default function Home() {
               >
                 {/* Real Photography Card */}
                 <FadeIn>
-                  <div
-                    style={{
-                      border: '1px solid var(--ivory-200)',
-                      borderRadius: 2,
-                      overflow: 'hidden',
-                      position: 'relative',
-                      background: colors.accent100,
-                    }}
-                  >
-                    <img
-                      src={imgMeta.src}
-                      alt={imgMeta.alt}
-                      style={{
-                        width: '100%',
-                        height: '100%',
-                        minHeight: 280,
-                        maxHeight: 340,
-                        objectFit: 'cover',
-                        display: 'block',
-                      }}
-                      loading="lazy"
-                    />
+                  {imgMeta?.arch ? (
                     <div
                       style={{
-                        position: 'absolute',
-                        top: 14,
-                        left: 14,
-                        background: 'rgba(7,20,42,0.85)',
-                        color: colors.accent,
-                        padding: '4px 10px',
-                        fontFamily: 'var(--font-mono)',
-                        fontSize: '0.6875rem',
-                        letterSpacing: '0.12em',
-                        borderRadius: 2,
+                        maxWidth: 340,
+                        margin: '0 auto',
+                        padding: 8,
+                        position: 'relative',
                       }}
                     >
-                      {div.number} · {imgMeta.badge}
+                      <div
+                        style={{
+                          position: 'relative',
+                          borderRadius: '999px 999px 0 0',
+                          border: '1px solid #C9A27A',
+                          padding: 8,
+                        }}
+                      >
+                        <div
+                          style={{
+                            borderRadius: '999px 999px 0 0',
+                            overflow: 'hidden',
+                            background: colors.accent100,
+                            aspectRatio: '3 / 4',
+                          }}
+                        >
+                          <img
+                            src={imgMeta.src}
+                            alt={imgMeta.alt}
+                            style={{
+                              width: '100%',
+                              height: '100%',
+                              objectFit: 'cover',
+                              objectPosition: 'center 45%',
+                              display: 'block',
+                            }}
+                            loading="lazy"
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  ) : (
+                    <div
+                      style={{
+                        border: '1px solid var(--ivory-200)',
+                        borderRadius: 2,
+                        overflow: 'hidden',
+                        position: 'relative',
+                        background: colors.accent100,
+                      }}
+                    >
+                      <img
+                        src={imgMeta.src}
+                        alt={imgMeta.alt}
+                        style={{
+                          width: '100%',
+                          height: '100%',
+                          minHeight: 280,
+                          maxHeight: 340,
+                          objectFit: 'cover',
+                          display: 'block',
+                        }}
+                        loading="lazy"
+                      />
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: 14,
+                          left: 14,
+                          background: 'rgba(7,20,42,0.85)',
+                          color: colors.accent,
+                          padding: '4px 10px',
+                          fontFamily: 'var(--font-mono)',
+                          fontSize: '0.6875rem',
+                          letterSpacing: '0.12em',
+                          borderRadius: 2,
+                        }}
+                      >
+                        {div.number} · {imgMeta.badge}
+                      </div>
+                    </div>
+                  )}
                 </FadeIn>
 
                 {/* Text */}

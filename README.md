@@ -1,29 +1,46 @@
 # SerajUlMaymar
 
-Umbrella website for **SerajUlMaymar** — three divisions (Construction, Software, Education) under one brand, built with React + Vite.
+Umbrella website for **SerajUlMaymar** — Construction, Software, Education, and Marriage Bureau under one brand, built with React + Vite.
 
 ## Quick Start
 
 ```bash
 npm install
-npm run dev          # http://localhost:3000
-npm run build        # production build → dist/
-npm run preview      # preview production build
+npm run dev               # http://localhost:3000
+npm run gen:apps-script   # regenerate apps-script/Fields.gs from marriageFormFields.js
+node scripts/verify-fields.mjs   # verify 150 Marriage Bureau fields + Fields.gs sync
+npm run build             # production build → dist/
+npm run preview           # preview production build
 ```
 
 ## Project Structure
 
 ```
 src/
-├── config/siteConfig.js     ← brand, contacts, stats, WhatsApp helper
+├── config/siteConfig.js     ← brand, contacts, stats, WhatsApp helper, marriageBureau env config
 ├── data/
 │   ├── divisions.js         ← THE REGISTRY — drives nav, routes, footer, home
+│   ├── marriageBureau.js    ← editable copy & image metadata for /marriage-bureau
+│   ├── marriageFormFields.js← single source of truth for the 150-field registration form
 │   ├── projects.js          ← construction photo gallery entries
 │   ├── levels.js            ← education academic levels
 │   └── subjects.js          ← education subject catalog
-├── components/              ← shared UI (Header, Footer, DivisionForm, etc.)
-├── pages/                   ← one page per route
-└── styles/index.css         ← all design tokens, division themes, textures
+├── components/              ← shared UI (Header, Footer, DivisionForm, MarriageRegistration, etc.)
+├── pages/                   ← one page per route (MarriageBureau is lazy-loaded)
+├── utils/marriagePdf.js     ← client-side photo resizing + lazy html2canvas/jsPDF biodata builder
+└── styles/
+    ├── index.css            ← base design tokens & division accents
+    └── marriage-bureau.css  ← scoped [data-division="marriage"] Invitation Card theme
+apps-script/
+├── Code.gs                  ← Google Apps Script web app receiver (verbatim)
+└── Fields.gs                ← generated field schema for Google Sheets & validation
+docs/
+├── form-fields-source.txt   ← canonical 150-field source specification
+└── MARRIAGE-BUREAU-SETUP.md ← step-by-step Google Sheet + Drive + Vercel setup for the owner
+scripts/
+├── gen-apps-script-fields.mjs
+├── verify-fields.mjs
+└── mock-receiver.mjs        ← local receiver mock server on port 8787
 ```
 
 ## How to Edit Config
@@ -54,7 +71,7 @@ The gallery grid renders automatically. The empty-state placeholder disappears o
 
 ## How to Add a New Division
 
-Adding a 4th (or 5th, ...) division requires only two changes:
+Adding a 5th (or 6th, ...) division requires only two changes:
 
 ### 1. Add an entry in `src/data/divisions.js`
 
@@ -115,12 +132,25 @@ Create a `public/_redirects` file:
 /*    /index.html   200
 ```
 
+## Marriage Bureau Setup (Google Sheets + Drive + Vercel)
+
+Follow [docs/MARRIAGE-BUREAU-SETUP.md](docs/MARRIAGE-BUREAU-SETUP.md) to deploy the included Google Apps Script web app (`apps-script/Code.gs` and `apps-script/Fields.gs`) inside your Google account and configure `VITE_MB_SCRIPT_URL` and `VITE_MB_TOKEN` in Vercel. If you ever update `src/data/marriageFormFields.js` before launch, run `npm run gen:apps-script` and `node scripts/verify-fields.mjs`.
+
 ## Design System
 
-- **Display font:** Fraunces (semibold, tight tracking)
+- **Display font:** Fraunces (wordmark), Cormorant Garamond (Marriage Bureau)
 - **Body font:** Instrument Sans
-- **Mono labels:** JetBrains Mono (uppercase, 11-12px, 0.12em tracking)
+- **Mono labels:** JetBrains Mono (uppercase, 11-12px, 0.12em tracking; omitted on Marriage Bureau)
 - **Base colors:** Navy #07142A / #0B1B33, Ivory #FBF8F1 / #F4EEE0, Gold #C6A15B
-- **Division accents:** Construction amber, Software blue, Education teal
+- **Division accents:** Construction amber, Software blue, Education teal, Marriage Bureau rose (`#B23A5A`)
 - **Max width:** 1200px, 8px spacing grid
 - **Icons:** lucide-react, stroke 1.5, used sparingly
+
+## CREDITS
+
+Marriage Bureau photographs in `public/images/marriage-bureau/` are sourced from Unsplash under the [Unsplash License](https://unsplash.com/license):
+
+- `hero-main.webp` — Photograph by **Areej Amin** via Unsplash ([source](https://unsplash.com/photos/a-close-up-of-a-persons-hands-with-henna-SFKTFNBSiYw))
+- `hero-secondary.webp` — Photograph by **Jennifer Kalenberg** via Unsplash ([source](https://unsplash.com/photos/a-diamond-ring-sits-in-a-white-velvet-box-nMoFmHqJnqo))
+- `how-it-works.webp` — Photograph by **Annie Spratt** via Unsplash ([source](https://unsplash.com/photos/white-paper-with-green-and-brown-flower-Yu-PUYHMVlg))
+- `closing-band.webp` — Photograph by **Artur Uber** via Unsplash ([source](https://unsplash.com/photos/ornate-metal-lanterns-with-glowing-light-zHlK_aMLRQ4))

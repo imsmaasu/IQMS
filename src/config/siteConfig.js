@@ -29,6 +29,13 @@ export const siteConfig = {
     { label: 'Karachi', value: 'Karachi' },
   ],
 
+  // Marriage Bureau receiver (Google Apps Script Web App; client env vars only)
+  marriageBureau: {
+    scriptUrl: import.meta.env.VITE_MB_SCRIPT_URL || '',
+    token: import.meta.env.VITE_MB_TOKEN || '',
+    minFillMs: 8000,
+  },
+
   /**
    * Build a WhatsApp deep link with a prefilled message.
    * @param {string} message : prefilled text
