@@ -15,7 +15,7 @@ const accentColors = {
 
 const divisionImages = {
   construction: {
-    src: '/divisions/construction-hero.webp',
+    src: '/divisions/construction-hero.jpg',
     alt: 'Custom home construction architecture in Karachi',
     badge: 'TURNKEY CONSTRUCTION'
   },

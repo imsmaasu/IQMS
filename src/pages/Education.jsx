@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, MessageCircle } from 'lucide-react';
+import { ArrowRight, MessageCircle, ExternalLink, GraduationCap, Users } from 'lucide-react';
 import SEO from '../components/SEO';
 import FadeIn from '../components/FadeIn';
 import siteConfig from '../config/siteConfig';
 import divisions from '../data/divisions';
 
 const div = divisions.find((d) => d.id === 'education');
+
+const studentFormUrl = 'https://forms.gle/PbcdMtzjr4tXCQQ38';
+const teacherFormUrl = 'https://forms.gle/ijHkWJqKtSeBrgiM6';
 
 const levels = [
   { name: 'Matric and FSc', badge: 'BISE and Federal Board' },
@@ -47,10 +50,27 @@ export default function Education() {
             </FadeIn>
             <FadeIn>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center' }}>
-                <Link to="/education/enroll" className="btn-primary" style={{ background: 'var(--accent)' }}>
-                  <MessageCircle size={18} strokeWidth={1.5} />
-                  Enroll Now
-                </Link>
+                <a
+                  href={studentFormUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                  style={{ background: 'var(--accent)' }}
+                >
+                  <GraduationCap size={18} strokeWidth={1.5} />
+                  Student Information Form
+                  <ExternalLink size={14} strokeWidth={1.5} />
+                </a>
+                <a
+                  href={teacherFormUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline"
+                >
+                  <Users size={18} strokeWidth={1.5} />
+                  Teacher Information Form
+                  <ExternalLink size={14} strokeWidth={1.5} />
+                </a>
                 <a
                   href={siteConfig.getWhatsAppUrl('Hello, I want to enroll for tutoring at IQMS STEM SEED PARKS.')}
                   target="_blank"
@@ -60,6 +80,125 @@ export default function Education() {
                 >
                   WhatsApp Us
                   <ArrowRight size={16} strokeWidth={1.5} />
+                </a>
+              </div>
+            </FadeIn>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Information Forms Section ── */}
+      <section style={{ background: '#fff', borderBottom: '1px solid var(--ivory-200)' }}>
+        <div className="container section-spacing">
+          <FadeIn>
+            <p className="mono-label" style={{ color: 'var(--accent)', marginBottom: 12 }}>
+              REGISTRATION & FORMS
+            </p>
+            <h2 style={{ marginBottom: 16 }}>Join IQMS STEM SEED PARKS</h2>
+            <p style={{ maxWidth: 600, marginBottom: 32, color: 'var(--muted)' }}>
+              Whether you are a student seeking expert tutoring or a qualified educator looking to teach, please fill out our official information form below.
+            </p>
+          </FadeIn>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 24,
+            }}
+          >
+            {/* Student Card */}
+            <FadeIn>
+              <div
+                style={{
+                  border: '1px solid var(--ivory-200)',
+                  borderRadius: 8,
+                  padding: 28,
+                  background: 'var(--ivory-50)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  height: '100%',
+                }}
+              >
+                <div>
+                  <div
+                    style={{
+                      width: 44,
+                      height: 44,
+                      borderRadius: 8,
+                      background: 'var(--accent-100)',
+                      color: 'var(--accent)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginBottom: 16,
+                    }}
+                  >
+                    <GraduationCap size={24} strokeWidth={1.5} />
+                  </div>
+                  <h3 style={{ marginBottom: 8, fontSize: '1.25rem' }}>Student Information Form</h3>
+                  <p style={{ fontSize: '0.9375rem', color: 'var(--muted)', marginBottom: 24 }}>
+                    Looking for a qualified tutor? Submit your subjects, academic level, and learning schedule requirements.
+                  </p>
+                </div>
+                <a
+                  href={studentFormUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                  style={{ background: 'var(--accent)', justifyContent: 'center' }}
+                >
+                  Open Student Form
+                  <ExternalLink size={16} strokeWidth={1.5} />
+                </a>
+              </div>
+            </FadeIn>
+
+            {/* Teacher Card */}
+            <FadeIn>
+              <div
+                style={{
+                  border: '1px solid var(--ivory-200)',
+                  borderRadius: 8,
+                  padding: 28,
+                  background: 'var(--ivory-50)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  height: '100%',
+                }}
+              >
+                <div>
+                  <div
+                    style={{
+                      width: 44,
+                      height: 44,
+                      borderRadius: 8,
+                      background: 'var(--accent-100)',
+                      color: 'var(--accent)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      marginBottom: 16,
+                    }}
+                  >
+                    <Users size={24} strokeWidth={1.5} />
+                  </div>
+                  <h3 style={{ marginBottom: 8, fontSize: '1.25rem' }}>Teacher Information Form</h3>
+                  <p style={{ fontSize: '0.9375rem', color: 'var(--muted)', marginBottom: 24 }}>
+                    Interested in tutoring with us? Submit your qualifications, expertise, teaching experience, and availability.
+                  </p>
+                </div>
+                <a
+                  href={teacherFormUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline"
+                  style={{ justifyContent: 'center' }}
+                >
+                  Open Teacher Form
+                  <ExternalLink size={16} strokeWidth={1.5} />
                 </a>
               </div>
             </FadeIn>
@@ -212,14 +351,29 @@ export default function Education() {
           ))}
 
           <FadeIn>
-            <Link
-              to="/education/enroll"
-              className="btn-primary"
-              style={{ background: 'var(--accent)' }}
-            >
-              <MessageCircle size={18} strokeWidth={1.5} />
-              Enroll Now
-            </Link>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center' }}>
+              <a
+                href={studentFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+                style={{ background: 'var(--accent)' }}
+              >
+                <GraduationCap size={18} strokeWidth={1.5} />
+                Student Information Form
+                <ExternalLink size={14} strokeWidth={1.5} />
+              </a>
+              <a
+                href={teacherFormUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline"
+              >
+                <Users size={18} strokeWidth={1.5} />
+                Teacher Information Form
+                <ExternalLink size={14} strokeWidth={1.5} />
+              </a>
+            </div>
           </FadeIn>
         </div>
       </section>

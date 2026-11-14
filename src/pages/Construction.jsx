@@ -69,7 +69,7 @@ export default function Construction() {
                 }}
               >
                 <img
-                  src="/projects/construction/custom-home.webp"
+                  src="/projects/construction/1.jpg"
                   alt="Custom home construction in Karachi"
                   style={{
                     width: '100%',
