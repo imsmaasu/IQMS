@@ -7,8 +7,8 @@
 
 export const siteConfig = {
   // Brand
-  brandName: 'SerajUlMaymar',
-  wordmark: { first: 'Seraj', middle: 'Ul', last: 'Maymar' },
+  brandName: 'SerajUl MerajUl Memar Organisation',
+  wordmark: { first: 'SerajUl', middle: 'MerajUl', last: 'Memar', suffix: 'Organisation' },
   tagline: 'Building homes, software, and minds.',
 
   // Contact
@@ -42,7 +42,7 @@ export const siteConfig = {
    * @returns {string} full wa.me URL
    */
   getWhatsAppUrl(message = '') {
-    const fallback = `Hello SerajUlMaymar! I would like to get in touch.`;
+    const fallback = `Hello SerajUl MerajUl Memar Organisation! I would like to get in touch.`;
     const text = encodeURIComponent((message || fallback).trim());
     return `https://wa.me/${this.whatsappNumber}?text=${text}`;
   },

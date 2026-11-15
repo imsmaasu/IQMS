@@ -8,6 +8,7 @@ import Construction from './pages/Construction';
 import Software from './pages/Software';
 import Education from './pages/Education';
 import EducationEnroll from './pages/EducationEnroll';
+import TutorAcademy from './pages/TutorAcademy';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import DivisionPage from './pages/DivisionPage';
@@ -57,6 +58,7 @@ export default function App() {
           })}
 
           <Route path="/education/enroll" element={<EducationEnroll />} />
+          <Route path="/tutor-academy" element={<TutorAcademy />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

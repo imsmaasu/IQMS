@@ -14,7 +14,12 @@ const accentColors = {
 
 const navLinks = [
   { to: '/', label: 'Home' },
-  ...divisions.map((d) => ({ to: `/${d.slug}`, label: d.name, dot: accentColors[d.accentKey] })),
+  ...divisions.flatMap((d) => [
+    { to: `/${d.slug}`, label: d.name, dot: accentColors[d.accentKey] },
+    ...(d.id === 'education'
+      ? [{ to: '/tutor-academy', label: 'Tutor Academy', dot: accentColors.education }]
+      : []),
+  ]),
   { to: '/contact', label: 'Contact' },
 ];
 

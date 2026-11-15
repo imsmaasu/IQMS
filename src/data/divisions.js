@@ -31,7 +31,7 @@ const divisions = [
     formConfig: {
       title: 'Request a Quote',
       submitLabel: 'Send via WhatsApp',
-      messagePrefix: 'CONSTRUCTION QUOTE REQUEST: SerajUlMaymar',
+      messagePrefix: 'CONSTRUCTION QUOTE REQUEST: SerajUl MerajUl Memar Organisation',
       fields: [
         { name: 'name', label: 'Your Name', type: 'text', required: true, placeholder: 'e.g. Ahmed Khan' },
         { name: 'whatsapp', label: 'WhatsApp or Phone', type: 'tel', required: true, placeholder: 'e.g. 0300 1234567' },
@@ -53,9 +53,9 @@ const divisions = [
       ],
     },
     seo: {
-      title: 'Construction | SerajUlMaymar',
+      title: 'Construction | SerajUl MerajUl Memar Organisation',
       description:
-        'Custom home construction and full renovations in Karachi. One team, start to handover. SerajUlMaymar Construction.',
+        'Custom home construction and full renovations in Karachi. One team, start to handover. SerajUl MerajUl Memar Organisation Construction.',
     },
   },
 
@@ -83,7 +83,7 @@ const divisions = [
     formConfig: {
       title: 'Project Inquiry',
       submitLabel: 'Send via WhatsApp',
-      messagePrefix: 'SOFTWARE PROJECT INQUIRY: SerajUlMaymar',
+      messagePrefix: 'SOFTWARE PROJECT INQUIRY: SerajUl MerajUl Memar Organisation',
       fields: [
         { name: 'name', label: 'Your Name', type: 'text', required: true, placeholder: 'e.g. Sara Ali' },
         { name: 'whatsapp', label: 'WhatsApp or Email', type: 'text', required: true, placeholder: 'e.g. 0300 1234567 or email' },
@@ -92,9 +92,9 @@ const divisions = [
       ],
     },
     seo: {
-      title: 'Software House | SerajUlMaymar',
+      title: 'Software House | SerajUl MerajUl Memar Organisation',
       description:
-        'Custom web apps, desktop software, mobile apps, and AI solutions. SerajUlMaymar Software House, Karachi.',
+        'Custom web apps, desktop software, mobile apps, and AI solutions. SerajUl MerajUl Memar Organisation Software House, Karachi.',
     },
   },
 
@@ -185,7 +185,7 @@ const divisions = [
       ],
     },
     seo: {
-      title: 'Education | IQMS STEM SEED PARKS | SerajUlMaymar',
+      title: 'Education | IQMS STEM SEED PARKS | SerajUl MerajUl Memar Organisation',
       description:
         'Find qualified tutors for Matric, FSc, O and A Levels, ECAT, MDCAT, and University subjects. Online or on site. IQMS STEM SEED PARKS.',
     },
@@ -218,9 +218,9 @@ const divisions = [
       title: 'Registration Form',
     },
     seo: {
-      title: 'Marriage Bureau | SerajUlMaymar',
+      title: 'Marriage Bureau | SerajUl MerajUl Memar Organisation',
       description:
-        'Marriage Bureau in Karachi, Pakistan. Register candidate details and partner requirements privately. SerajUlMaymar Marriage Bureau.',
+        'Marriage Bureau in Karachi, Pakistan. Register candidate details and partner requirements privately. SerajUl MerajUl Memar Organisation Marriage Bureau.',
     },
   },
 ];

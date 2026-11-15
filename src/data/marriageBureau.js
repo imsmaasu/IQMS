@@ -16,7 +16,7 @@ export const marriageBureauCopy = {
       'Register once for yourself or a family member. Our team in Karachi reads every submission privately and follows up directly on WhatsApp.',
     primaryCta: 'Start registration',
     secondaryCta: 'Ask on WhatsApp',
-    whatsappIntro: 'Hello SerajUlMaymar Marriage Bureau, I would like to ask about registration.',
+    whatsappIntro: 'Hello SerajUl MerajUl Memar Organisation Marriage Bureau, I would like to ask about registration.',
   },
 
   // Placeholder 4-step workflow — owner can confirm or edit these strings anytime.
@@ -112,7 +112,7 @@ export const marriageBureauCopy = {
   },
 
   closing: {
-    eyebrow: 'SERAJULMAYMAR · KARACHI',
+    eyebrow: 'SERAJUL MERAJUL MEMAR ORGANISATION · KARACHI',
     headlineBefore: 'Register once. We ',
     headlineEmphasis: 'follow up',
     headlineAfter: ' on WhatsApp.',

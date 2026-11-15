@@ -6,7 +6,7 @@ import SEO from '../components/SEO';
 export default function NotFound() {
   return (
     <>
-      <SEO title="404 | Page Not Found | SerajUlMaymar" description="This page does not exist." />
+      <SEO title="404 | Page Not Found | SerajUl MerajUl Memar Organisation" description="This page does not exist." />
 
       <section style={{ background: 'var(--ivory-50)' }}>
         <div

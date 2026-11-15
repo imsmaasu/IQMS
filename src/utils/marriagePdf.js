@@ -196,7 +196,7 @@ function buildHeaderHtml({ id, dateStr, photoDataUrl, photoPrivacy }) {
       <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; padding-bottom:14px; border-bottom:1px solid #C9A27A;">
         <div>
           <div style="font-family:'Instrument Sans', Arial, sans-serif; font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.14em; color:#7A1F37; margin-bottom:4px;">
-            SerajUlMaymar · Marriage Bureau
+            SerajUl MerajUl Memar Organisation · Marriage Bureau
           </div>
           <h1 style="margin:0 0 6px; font-family:'Cormorant Garamond', Georgia, serif; font-size:26px; font-weight:600; line-height:1.08; color:#2A1017;">
             Candidate Biodata
@@ -354,7 +354,7 @@ export async function generateBiodataPdf({
             ? buildHeaderHtml({ id, dateStr, photoDataUrl, photoPrivacy })
             : `
               <div style="display:flex; justify-content:space-between; align-items:center; padding-bottom:8px; margin-bottom:10px; border-bottom:1px solid #F1DDD2; font-size:10px; color:#6E5A5F;">
-                <span style="font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7A1F37;">SerajUlMaymar · Marriage Bureau</span>
+                <span style="font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#7A1F37;">SerajUl MerajUl Memar Organisation · Marriage Bureau</span>
                 <span>Registration ${escapeHtml(id)} · ${escapeHtml(dateStr)}</span>
               </div>
             `;
