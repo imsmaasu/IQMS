@@ -35,11 +35,6 @@ export default function Footer() {
                   {service}
                 </Link>
               ))}
-              {div.id === 'education' && (
-                <Link to="/tutor-academy" style={{ color: 'var(--accent)', fontWeight: 500 }}>
-                  Tutor Academy (Forms)
-                </Link>
-              )}
             </div>
           ))}
 

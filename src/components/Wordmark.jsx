@@ -23,7 +23,8 @@ export default function Wordmark({ size = '1.25rem', light = false }) {
         lineHeight: 1.2,
         display: 'inline-flex',
         alignItems: 'baseline',
-        flexWrap: 'wrap',
+        whiteSpace: 'nowrap',
+        flexShrink: 0,
       }}
       aria-label={siteConfig.brandName}
     >

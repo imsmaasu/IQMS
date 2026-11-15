@@ -192,9 +192,40 @@ const divisions = [
   },
 
   {
+    id: 'tutor-academy',
+    slug: 'tutor-academy',
+    number: '04',
+    name: 'Tutor Academy',
+    tagline: 'Official registration portal for students and tutors.',
+    summary:
+      'IQMS STEM SEED PARKS Tutor Academy: structured information forms for students looking for expert academic coaching and qualified teachers applying to join our faculty.',
+    accentKey: 'education',
+    services: [
+      'Student Information & Course Enrollment',
+      'Teacher & Educator Faculty Application',
+      'Matric, FSc, O/A Levels, ECAT, MDCAT & University STEM',
+      'Online and on-site tutoring in Karachi',
+    ],
+    heroCopy: {
+      eyebrow: 'IQMS STEM SEED PARKS · TUTOR ACADEMY',
+      headline: 'Dedicated registration for Students & Teachers.',
+      description:
+        'Submit student academic coaching requirements or apply as an educator to join our faculty. Direct access to our official registration forms.',
+    },
+    formConfig: {
+      title: 'Tutor Academy Registration',
+    },
+    seo: {
+      title: 'Tutor Academy | SerajUl MerajUl Memar Organisation',
+      description:
+        'Official registration forms for students and teachers at IQMS STEM SEED PARKS Tutor Academy.',
+    },
+  },
+
+  {
     id: 'marriage',
     slug: 'marriage-bureau',
-    number: '04',
+    number: '05',
     name: 'Marriage Bureau',
     tagline: 'Private family registrations, reviewed with care.',
     summary:

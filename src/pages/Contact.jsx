@@ -17,6 +17,7 @@ const formRoutes = {
   construction: '/construction',
   software: '/software',
   education: '/education/enroll',
+  'tutor-academy': '/tutor-academy',
   marriage: '/marriage-bureau#register',
 };
 

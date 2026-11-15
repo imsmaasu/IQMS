@@ -14,12 +14,7 @@ const accentColors = {
 
 const navLinks = [
   { to: '/', label: 'Home' },
-  ...divisions.flatMap((d) => [
-    { to: `/${d.slug}`, label: d.name, dot: accentColors[d.accentKey] },
-    ...(d.id === 'education'
-      ? [{ to: '/tutor-academy', label: 'Tutor Academy', dot: accentColors.education }]
-      : []),
-  ]),
+  ...divisions.map((d) => ({ to: `/${d.slug}`, label: d.name, dot: accentColors[d.accentKey] })),
   { to: '/contact', label: 'Contact' },
 ];
 
@@ -30,7 +25,7 @@ export default function Header() {
 
   const isActive = (to) => {
     if (to === '/') return pathname === '/';
-    return pathname.startsWith(to);
+    return pathname === to || pathname.startsWith(to + '/');
   };
 
   return (

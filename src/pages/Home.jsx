@@ -29,6 +29,11 @@ const divisionImages = {
     alt: 'STEM education and academic mentoring',
     badge: 'TUTOR MARKETPLACE'
   },
+  'tutor-academy': {
+    src: '/divisions/education-hero.webp',
+    alt: 'Tutor Academy student and teacher registrations',
+    badge: 'TUTOR ACADEMY'
+  },
   marriage: {
     src: '/images/marriage-bureau/hero-main.webp',
     alt: 'Bridal hands decorated with traditional mehndi henna and gold wedding bands',
@@ -77,9 +82,9 @@ export default function Home() {
 
             <FadeIn>
               <p style={{ fontSize: '1.0625rem', maxWidth: 520, marginBottom: 32 }}>
-                {siteConfig.brandName} is a Karachi based group with 25+ years in
-                construction and education, alongside software development and our
-                marriage bureau. {divisions.length} divisions, one standard of care.
+                {siteConfig.brandName} is a Karachi based group with 25+ years of
+                excellence across construction, software development, education,
+                tutor academy, and marriage bureau. {divisions.length} divisions, one standard of care.
               </p>
             </FadeIn>
 
@@ -141,11 +146,14 @@ export default function Home() {
                     onBlur={(e) => (e.currentTarget.style.background = 'transparent')}
                   >
                     <span
-                      className="mono-label"
-                      style={{ color: colors.accent, minWidth: 28 }}
-                    >
-                      {div.number}
-                    </span>
+                      style={{
+                        width: 8,
+                        height: 8,
+                        borderRadius: '50%',
+                        backgroundColor: colors.accent,
+                        flexShrink: 0,
+                      }}
+                    />
                     <span style={{ fontWeight: 600, color: 'var(--navy-950)', flex: 1 }}>
                       {div.name}
                     </span>

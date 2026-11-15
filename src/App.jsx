@@ -21,6 +21,7 @@ const customDivisionPages = {
   construction: <Construction />,
   software: <Software />,
   education: <Education />,
+  'tutor-academy': <TutorAcademy />,
   marriage: (
     <Suspense
       fallback={
@@ -58,7 +59,6 @@ export default function App() {
           })}
 
           <Route path="/education/enroll" element={<EducationEnroll />} />
-          <Route path="/tutor-academy" element={<TutorAcademy />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
